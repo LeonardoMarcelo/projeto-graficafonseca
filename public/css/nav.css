@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;700&family=Lexend+Deca&family=Montserrat:wght@500;700&family=Overpass:wght@300;400;600;700&family=Red+Hat+Display:wght@500;700;900&family=Roboto&family=Ubuntu:wght@400;500;700&display=swap');
+
+header {
+    width: 100%;
+    max-width: 100vw;
+    max-height: 1000px;
+    padding: 2rem 3rem var(--spacing-page);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url(/img/image-content/bg-desktop.png);
+    background-size: cover;
+    gap: 2rem;
+    box-shadow: 0px 76px 30px rgba(100, 50, 0, 0.01),
+        0px 43px 26px rgba(100, 50, 0, 0.03),
+        0px 19px 19px rgba(100, 50, 0, 0.04),
+        0px 5px 10px rgba(100, 50, 0, 0.05), 0px 0px 0px rgba(100, 50, 0, 0.05);
+}
+
+.logo-header {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.logo-header img {
+    max-width: 600px;
+}
+
+.nav-bar {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.menu-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+}
+
+.nav-menu-itens {
+    position: relative;
+}
+
+.links-menu-nav {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 4px;
+}
+
+.links-menu-nav::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0px;
+    height: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.nav-menu-itens:hover .links-menu-nav::before {
+    width: 100%;
+}
+
+@media (max-width: 840px) {
+    .menu-nav {
+        flex-wrap: wrap;
+        column-gap: 1rem;
+    }
+
+    .links-menu-nav {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .links-menu-nav::before {
+        bottom: -4px;
+    }
+
+    .carousel,
+    .slide {
+        height: 300px !important;
+        overflow: hidden;
+    }
+
+    header {
+        max-height: 500px;
+    }
+}
